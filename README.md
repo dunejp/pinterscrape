@@ -1,5 +1,5 @@
 # Pinterscrape
-Pinterscrape is a simple and lightweight web scraper for pinterest.
+:pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
 
 > [!NOTE]
 > Pinterscrape currently only supports image scraping. Attempting to scrape videos or stories will result in an error.
