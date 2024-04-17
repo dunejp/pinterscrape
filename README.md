@@ -67,6 +67,18 @@ pinterscrape.proxy = url => {
 }
 ```
 
+## Error
+When `pinterscrape.get` failed to scrape, it will throw an error (at the last attempt) and return the error information (at the first attempt).
+
+```javascript
+{
+  error: Error,
+  cause: String
+}
+```
+
+If there's an error related to regular expression, `cause` could be either image, author, caption, or pin, depending on the part that triggers the error.
+
 ***
 
 > [!WARNING]
