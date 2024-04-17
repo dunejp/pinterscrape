@@ -7,10 +7,14 @@ var pinterscape = {
     const request = await fetch(this.proxy(`https://pinterest.com/pin/${id}`))
     let raw = await request.text()
     if(!raw.includes("https://i.pinimg.com/originals")) throw Error("Pin not found")
+    let x = 0
     try {
       const image = "https://i.pinimg.com/originals/" + raw.match(/\"url\"\:\"https\:\/\/i\.pinimg\.com\/originals\/(.*?)\"/i)[1]
-      const author = raw.match(/\"originpinner\"\:\{.*\"username\"\:\"(.*)\".*\}/i)[1].split("\",")[0]
+      x++
+      const author = raw.match(/\"username\"\:\"(.*?)\".*\}/i)[1]
+      x++
       const caption = raw.match(/\"closeupunifieddescription\"\:\"(.*)\"/i)[1].split("\",")[0].trim()
+      x++
       const pin = raw.match(/\"pinid\"\:\"(.*?)\"/i)[1]
       return {
         image, author, pin,
@@ -18,6 +22,10 @@ var pinterscape = {
       }
     } catch(e) {
       this.get(id, (ret || 0) + 1)
+      return {
+        error: e,
+        cause: ["image", "author", "caption", "pin"][x]
+      }
     }
   },
   async search(term) {
