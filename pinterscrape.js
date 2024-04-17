@@ -1,4 +1,4 @@
-var pinterscape = {
+var pinterscrape = {
   proxy(url) {
     return encodeURI(`https://creprox.vercel.app/${url.replace(/https\:\//, "https:")}`)
   },
