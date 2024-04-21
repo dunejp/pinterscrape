@@ -1,7 +1,7 @@
 > [!NOTE]
 > Live preview page will be implemented soon.
 >
-> *Stamped at April 21, 2023*
+> *Stamped at April 21, 2024*
 
 # Pinterscrape
 :pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
