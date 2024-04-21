@@ -1,7 +1,12 @@
+> [!NOTE]
+> Live preview page will be implemented soon.
+>
+> *Stamped at April 21, 2023*
+
 # Pinterscrape
 :pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Pinterscrape currently only supports image scraping. Attempting to scrape videos or stories will result in an error.
 
 ```javascript
@@ -28,7 +33,7 @@ Simply call the method `get` with the pin ID as a string.
 await pinterscrape.get(PIN_ID)
 ```
 
-> [!IMPORTANT]
+> [!WARNING]
 > The argument `PIN_ID` must be a string. I encountered an incorrect lookup during scraping, not due to the process itself, but rather because the pin ID was assigned as a number.
 
 This method will return an object. If it does not, it will attempt to scrape it again as a fallback.
