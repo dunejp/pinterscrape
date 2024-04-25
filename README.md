@@ -87,4 +87,4 @@ If there's an error related to regular expression, `cause` could be either image
 ***
 
 > [!WARNING]
-> Pinterscrape's usual latency is between 2-6 seconds due to pinterest's source code.
+> Pinterscrape's usual latency is between 2-4 seconds due to pinterest's source code.
