@@ -1,10 +1,7 @@
-> [!NOTE]
-> Live preview page will be implemented soon.
->
-> *Stamped at April 21, 2024*
-
 # Pinterscrape
 :pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
+
+<p align="center"><a href="https://crebin.vercel.app/demo/pinterscrape"><kbd>Try it online :large_blue_circle:</kbd></a></p>
 
 > [!IMPORTANT]
 > Pinterscrape currently only supports image scraping. Attempting to scrape videos or stories will result in an error.
@@ -84,7 +81,7 @@ When `pinterscrape.get` failed to scrape, it will throw an error (at the last at
 
 If there's an error related to regular expression, `cause` could be either image, author, caption, or pin, depending on the part that triggers the error.
 
-***
+# Footnote
 
 > [!WARNING]
 > Pinterscrape's usual latency is between 2-4 seconds due to pinterest's source code.
