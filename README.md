@@ -22,6 +22,8 @@ const pin = await pinterscrape.get("682084306094066099")
 
 Pinterscrape offers online usage at [/demo/pinterscrape](https://crebin.vercel.app/demo/pinterscrape)
 
+![](demo.gif)
+
 ## Documentation
 
 ### Scraping an image
