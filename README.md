@@ -35,7 +35,7 @@ await pinterscrape.get(PIN_ID)
 ```
 
 > [!WARNING]
-> The argument `PIN_ID` must be a string. I encountered an incorrect lookup during scraping, not due to the process itself, but rather because the pin ID was assigned as a number.
+> The argument `PIN_ID` must be a string.
 
 This method will return an object. If it does not, it will attempt to scrape it again as a fallback.
 
