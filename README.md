@@ -1,8 +1,6 @@
 # Pinterscrape
 :pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
 
-<p align="center"><a href="https://crebin.vercel.app/demo/pinterscrape"><kbd>Try it online :large_blue_circle:</kbd></a></p>
-
 > [!IMPORTANT]
 > Pinterscrape currently only supports image scraping. Attempting to scrape videos or stories will result in an error.
 
@@ -19,6 +17,10 @@ const pin = await pinterscrape.get("682084306094066099")
   pin: "682084306094066099"
 }
 ```
+
+## Try it Online
+
+Pinterscrape offers online usage at [/demo/pinterscrape](https://crebin.vercel.app/demo/pinterscrape)
 
 ## Documentation
 
@@ -44,7 +46,7 @@ This method will return an object. If it does not, it will attempt to scrape it 
 }
 ```
 
-## Searching for pins
+### Searching for pins
 
 Simply call the method `search` with the query as a string.
 
@@ -57,7 +59,7 @@ await pinterscrape.search(QUERY)
 
 This method will return an array of pin IDs.
 
-## Using a proxy
+### Using a proxy
 
 Most web scrapers use rotating proxies. The default proxy used is [creprox](https://github.com/creuserr/creprox).
 
@@ -69,7 +71,7 @@ pinterscrape.proxy = url => {
 }
 ```
 
-## Error
+### Error
 When `pinterscrape.get` failed to scrape, it will throw an error (at the last attempt) and return the error information (at the first attempt).
 
 ```javascript
@@ -81,7 +83,7 @@ When `pinterscrape.get` failed to scrape, it will throw an error (at the last at
 
 If there's an error related to regular expression, `cause` could be either image, author, caption, or pin, depending on the part that triggers the error.
 
-# Footnote
+## Footnote
 
 > [!WARNING]
 > Pinterscrape's usual latency is between 2-4 seconds due to pinterest's source code.
