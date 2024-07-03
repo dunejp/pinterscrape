@@ -1,3 +1,7 @@
+> [!WARNING]
+> **Archived** <br>
+> Due to having a severe problem regarding the performance latency, this API has been deprecated.
+
 # Pinterscrape
 :pushpin: Pinterscrape is a simple and lightweight web scraper for pinterest.
 
