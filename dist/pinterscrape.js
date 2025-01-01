@@ -29,7 +29,7 @@ var pinterscrape = {
     }
   },
   async search(term) {
-    const request = await fetch(this.proxy(`https://pinterest.com/search/pins?q=${term}`))
+    const request = await fetch(this.proxy(`https://pinterest.com/search/pins?q=${encodeURIComponent(term)}`))
     let raw = await request.text()
     const match = [...raw.matchAll(/href\=\"\/pin\/([0-9]*?)\/\"/gi)]
     return match.map(x => x[1])
