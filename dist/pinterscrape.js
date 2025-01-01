@@ -1,6 +1,6 @@
 var pinterscrape = {
   proxy(url) {
-    return encodeURI(`https://creprox.vercel.app/${url.replace(/https\:\//, "https:")}`)
+    return encodeURI(`https://creprox.vercel.app/${url.replace(/http(s?)\:\/\//, "")}`)
   },
   async get(id, ret) {
     if(ret == 2) throw Error("Failed to scrape")
